@@ -1,0 +1,62 @@
+
+<div class="tvPage">
+    <div class="videoContainer row">
+
+        <div class="youtubeContainer col-md-8 col-sm-12 embed-responsive embed-responsive-16by9">
+            <youtube-player [videoId]="details.youtubeLink" suggestedQuality="default">
+            </youtube-player>
+        </div>
+
+        <div class="information col-md-4 col-sm-12">
+            <h1 class="movieTitle">{{details.title}}</h1>
+            <h3 class="tag"><i>{{details.tagline}}</i></h3>
+            <h2 class="date">{{details.date}} | &#9733; {{details.vote}} | {{details.runtime}}</h2>
+            <h4 class="genres">Genres : <span class="genresDetail">{{details.genres}}</span></h4>
+            <h4 class="lang">Spoken Languages : <span class="langDetail">{{details.languages}}</span></h4>
+            <button type="button" class="btn btn-primary btn-lg" (click)="editWatchList()"
+                    id="watchListBtn"></button>
+
+          
+                <div class="alert alert-danger alert-dismissible fade show" role="alert" id="removed"
+                    style="display: none;">
+                    <button type="button" class="close" (click)="hideAlert('removed')">
+                        <span>&times;</span>
+                    </button>
+                    Removed from Watchlist.
+                </div>
+
+                <div class="alert alert-success alert-dismissible fade show" role="alert" id="added"
+                    style="display: none;">
+                    Added to Watchlist.
+                    <button type="button" class="close" (click)="hideAlert('added')">
+                        <span>&times;</span>
+                    </button>
+                </div>
+            
+        </div>
+    </div>
+
+    <div class="discription" *ngIf="details.overview">
+        <h2 class="dis">Description</h2>
+        <p class="disBody">{{details.overview}}</p>
+    </div>
+
+    <div class="share">
+        <h2 class="shareTitle">Share</h2>
+
+        <a href="https://twitter.com/intent/tweet?text={{twitterText1}}{{twitterText2}}" class="twitter-share"
+            hashtags="USC; CSCI571; FightOn" data-show-count="false" target="_blank">
+            <i class="fab fa-twitter"></i>
+        </a>
+
+        <a class="fb-share-button" href="{{facebookLink}}" target="_blank">
+            <i class="fab fa-facebook-square"></i>
+        </a>
+    </div>
+
+    <div class="cast">
+        <app-tv-cast [type]="'tv'" [id]="id"></app-tv-cast>
+    </div>
+    <app-tv-review [type]="'tv'" [id]="id"></app-tv-review>
+    <app-tv-sim-and-rec [type]="'tv'" [id]="id"></app-tv-sim-and-rec>
+</div>

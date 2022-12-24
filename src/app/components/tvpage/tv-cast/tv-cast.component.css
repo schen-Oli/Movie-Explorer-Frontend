@@ -1,0 +1,356 @@
+.castTitle{
+  font-size: 3vw;
+  color:white;
+  position: relative;
+}
+
+.castContainer{
+    width:100%; 
+    height:52vh; 
+    overflow-x: scroll;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    padding-top: 10px; 
+}
+
+.cardContainer{
+  width:100%; 
+  height:48vh;
+  position: relative;
+  top:0;
+  left:0;
+}
+
+.card{
+  border-radius: 20px;
+  height: 48vh;
+  width: 105%;
+  position: relative;
+  top:0;
+  left:-0.3vw;
+  outline: none;
+  border: none;
+  transition:200ms ease-in-out;
+}
+
+.card:hover{
+  transform: scale(1.05);
+}
+
+.card-img-top{
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-position: top center;
+  background-size: cover;
+  outline: none;
+  border: none;
+}
+
+.card-title{
+  padding-left: 10px;
+  padding-right:10px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.2vw;
+  line-height: 2vw;
+  font-weight: bold;
+  background-color: white;
+  position: relative;
+  bottom: 5px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.char{
+  font-weight: lighter;
+  position: relative;
+  top: 0.5vw;
+  font-size: 1.2vw;
+  line-height: 1.2vw;
+}
+
+
+/* Pop up */
+
+.modal-content{
+  font-family: 'Montserrat', sans-serif;
+  background-color: white;
+}
+
+.close{
+  border: none;
+  }
+
+.close:hover{
+border: black 1px solid;
+}
+
+.profile{
+  width: 100%;
+  height: 380px;
+}
+
+.modal-title{
+  font-size: xx-large;
+}
+
+#pic{
+  background-size:cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  width:25%;
+  height:380px;
+  position: relative;
+  top:0;
+  left: 10;
+}
+
+.info{
+  width:70%;
+  position: relative;
+  top: -375px;
+  left: 27%;
+  height: 375px;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: lighter;
+  font-size: 2vh;
+  line-height: 3vh;
+}
+
+.information{
+  padding: 0;
+  margin: 0;
+}
+
+a{
+  font-size:4vh;
+  padding-right: 15px;
+  position: relative;
+  top: 50px;
+}
+
+#imdb{
+color: rgb(225, 180, 60)
+}
+
+#ins{
+  color: rgb(135, 25, 135)
+}
+
+#fb{
+  color: rgb(10, 35,250)
+}
+
+#tw{
+  color: rgb(40, 150, 250)
+}
+
+.my-custom-class {
+  font-size: 3vh;
+}
+
+#bioTitle{
+  font-size: xx-large;
+  position: relative;
+  top: 50px;
+}
+
+#biography{
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: lighter;
+  position: relative;
+  top: 60px;
+  font-size: 2vh;
+  line-height: 3vh;
+}
+
+
+/* Scroll Bar*/
+.castContainer::-webkit-scrollbar{
+  height: 16px;
+}
+
+.castContainer::-webkit-scrollbar-track {
+  background: rgb(5, 10, 50);
+  border-radius: 8px;
+  box-shadow: inset 0 0 3px grey; 
+}
+ 
+/* Handle */
+.castContainer::-webkit-scrollbar-thumb {
+  background: silver; 
+  border-radius: 8px;
+  
+}
+
+/* Handle on hover */
+.castContainer::-webkit-scrollbar-thumb:hover {
+  background: gray; 
+}
+
+
+
+.modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+.modal-body::-webkit-scrollbar-track {
+  background: white;
+  border-radius: 0;
+  box-shadow: none;
+}
+ 
+/* Handle */
+.modal-body::-webkit-scrollbar-thumb {
+  background: silver; 
+  border-radius: 4px;
+  
+}
+
+/* Handle on hover */
+.modal-body::-webkit-scrollbar-thumb:hover {
+  background: gray; 
+}
+
+
+  /*****For Small Screen ************/
+  /*****For Small Screen ************/
+  /*****For Small Screen ************/
+  /*****For Small Screen ************/
+  /*****For Small Screen ************/
+  /*****For Small Screen ************/
+  /*****For Small Screen ************/
+  /*****For Small Screen ************/
+  @media screen and (max-width: 600px) {
+    .castTitle{
+      font-size: 30px;
+      left: 25px;
+      width: 300px;
+    }
+    
+    .castContainer{ 
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        height: 350px;
+    }
+
+    .castContainer::-webkit-scrollbar {
+      display: none;
+    } 
+
+    .modal{ 
+      max-height: 100%;
+      width: 100%;
+  }
+
+    .cardContainer{
+      width:100%; 
+      height:330px;
+    }
+    
+    .card{
+      border-radius: 20px;
+      height: 330px;
+      left:23px;
+    }
+    
+    .card-img-top{
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+    
+    .card-title{
+      font-size: 17px;
+      line-height: 25px;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      top: 10px;
+      margin-top: 0;
+    }
+    
+    .char{
+      font-size: 17px;
+      line-height: 17px;
+    }
+    
+  
+    /* Small Pop up */
+    
+    .profile{
+      width: 100%;
+      height: auto;
+      min-height: 300px;
+    }
+    
+    .modal-title{
+      font-size: large;
+    }
+    
+    #pic{
+      background-size:contain;
+      background-position: top center;
+      background-repeat: no-repeat;
+      width:100%;
+      height: 460px;
+    }
+    
+    .info{
+      width:100%;
+      position: relative;
+      top: 0px;
+      left: 0%;
+      height: auto;
+      font-family: 'Kumbh Sans', sans-serif;
+      font-weight: lighter;
+      font-size: 15px;
+      line-height: 20px;
+    }
+    
+    a{
+      font-size:xx-large;
+      padding-right: 10px;
+      top: 30px;
+    }
+    
+    #biography{
+      font-family: 'Kumbh Sans', sans-serif;
+      font-weight: lighter;
+      font-size: 15px;
+      line-height: 20px;
+    }
+
+    .modal-body::-webkit-scrollbar {
+      width: 8px;
+    }
+  
+    /* Track */
+    .modal-body::-webkit-scrollbar-track {
+      background: white;
+      border-radius: 0;
+      box-shadow: none;
+    }
+     
+    /* Handle */
+    .modal-body::-webkit-scrollbar-thumb {
+      background: silver; 
+      border-radius: 4px;
+      
+    }
+    
+    /* Handle on hover */
+    .modal-body::-webkit-scrollbar-thumb:hover {
+      background: gray; 
+    }
+    
+    .modal-dialog,
+.modal-content {
+    height: 99%;
+}
+
+    .modal-body{
+      overflow-y: scroll;
+    }
+    
+  }
+

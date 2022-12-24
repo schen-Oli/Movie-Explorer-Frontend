@@ -1,0 +1,222 @@
+#cast-title {
+  font-size: xx-large;
+  color: white;
+  position: relative;
+}
+
+.cast-container {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+  padding: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.card-container {
+  padding: 6px;
+  outline: none;
+  border: none;
+}
+
+.card {
+  border-radius: 20px;
+  height: 350px;
+  width: 100%;
+  position: relative;
+  top: 0;
+  outline: none;
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+  transition: 500ms ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.card-img-top {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-position: middle center;
+  background-size: cover;
+  outline: none;
+  border: none;
+}
+
+.card-title {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: bold;
+  background-color: transparent;
+  position: relative;
+  bottom: 5px;
+}
+
+.character {
+  font-weight: lighter;
+  position: relative;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+/* Pop up */
+
+.modal-header {
+  font-family: 'Michroma', sans-serif;
+}
+
+.modal-title {
+  font-size: xx-large;
+}
+
+.profile {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#pic {
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  height: 380px;
+  border-radius: 20px;
+}
+
+#info-container {
+  font-weight: lighter;
+  font-size: 15px;
+  line-height: 25px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.information {
+  padding: 0;
+  margin: 0;
+}
+
+.external-link-container {
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.icon{
+  margin-right: 10px;
+  color: black !important;
+}
+
+#imdb:hover {
+  color: rgb(225, 180, 60) !important;
+}
+
+#ins:hover {
+  color: rgb(135, 25, 135) !important;
+}
+
+#fb:hover {
+  color: rgb(10, 35, 250) !important;
+}
+
+#tw:hover {
+  color: rgb(40, 150, 250) !important;
+}
+
+.popover {
+  font-size: 20px;
+}
+
+#bioTitle {
+  font-size: xx-large;
+  position: relative;
+  margin-top: 20px;
+  font-family: 'Michroma', sans-serif;
+}
+
+#biography {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+  position: relative;
+  top: 10px;
+  font-size: 15px;
+  line-height: 25px;
+  padding: 10px;
+}
+
+
+/* Scroll Bar*/
+.cast-container::-webkit-scrollbar {
+  height: 16px;
+}
+
+.cast-container::-webkit-scrollbar-track {
+  background: rgba(253, 253, 253, 0.5);
+  border-radius: 8px;
+}
+
+/* Handle */
+.cast-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+
+}
+
+/* Handle on hover */
+.cast-container::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 255, 255);
+}
+
+/**** For Small Screen ****/
+
+@media screen and (max-width: 768px) {
+  #cast-title {
+    font-size: large;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .cast-container {
+    width: 90%;
+    padding: 10px;
+    margin: 0;
+    position: relative;
+    left: 5%;
+  }
+
+  .card {
+    height: 300px;
+  }
+
+  /* Small Pop up */
+  .profile {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+  }
+
+  .modal-title {
+    font-size: medium;
+  }
+
+  .profile {
+    margin: 0px;
+  }
+  
+  #pic {
+    width: 100%;
+    height: 460px;
+    margin-bottom: 20px;
+  }
+
+  #bioTitle{
+    font-size: medium;
+  }
+
+  #biography{
+    font-size: small;
+  }
+}

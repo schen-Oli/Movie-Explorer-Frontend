@@ -1,0 +1,48 @@
+<ngb-carousel id="main-carousel" [interval]="4000">
+  <ng-template ngbSlide *ngFor="let slide of slides">
+    <div class="card" [routerLink]="['/watch', slide.type, slide.id]">
+      <div class="backdrop" style="background-image: url({{slide.backdrop}});"></div>
+      <div class="card-img-overlay">
+        <p class="card-title">{{slide.title}}</p>
+      </div>
+    </div>
+  </ng-template>
+</ngb-carousel>
+
+
+<!-- 
+<ng-container *ngIf="isScreenWide|async">
+<ngb-carousel class="carousel" [interval] = "4000" >
+
+  <ng-template ngbSlide *ngFor="let slide of slides">
+
+    <div class="card" [routerLink]="['/watch', slide.type, slide.id]">
+      <img class="card-img" src="{{slide.backdrop}}">
+      
+      <div class="card-img-overlay">
+        <p class="card-title">{{slide.title}}</p>
+      </div>
+    </div>
+
+  </ng-template>
+
+</ngb-carousel>
+</ng-container>
+
+
+<div class="slidesComponent" *ngIf="!(isScreenWide|async)">
+  <ngb-carousel class="carouselContainerSmall" [showNavigationIndicators]="false" [interval]="4000">
+    <ng-template ngbSlide *ngFor="let slide of slides">
+
+      <div class="oneSlideSmall" [routerLink]="['/watch', slide.type, slide.id]">
+        <div class="img-wrapperSmall" [style.background-image]="'url(' + slide.backdrop+ ')'">
+          <div class="carousel-captionSmall">
+            <p class="titleSmall">{{slide.title}}</p>
+          </div>
+        </div>
+      </div>
+
+    </ng-template>
+
+  </ngb-carousel>
+</div> -->

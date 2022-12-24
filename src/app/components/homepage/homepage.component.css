@@ -1,0 +1,30 @@
+#home-page-container{
+    background-image: linear-gradient(to right bottom, #020344, #003171, #005d98, #008ab9, #28b8d5);
+    color: white;
+    font-family: 'Michroma', sans-serif;
+    transition: 500ms ease-in-out;
+}
+
+.tiles-container{
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.titles{
+    margin-bottom: 10px;
+    font-size: xx-large;
+    transition: 500ms ease-in-out;
+    margin-left: 10%;
+}
+
+@media screen and (max-width: 768px) {
+    .titles{
+        margin-left:0;
+        font-size: x-large;
+    }
+
+    div,#home-page-container{
+        text-align: center;
+    }
+
+}

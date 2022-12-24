@@ -1,0 +1,96 @@
+.my-list-container{
+    background-image: linear-gradient(to left top, #4f5e89, #4d6a9d, #4576b1, #3583c6, #0090da);
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    min-height: 100%;
+    padding-bottom: 30px;
+    font-family: 'Michroma', sans-serif;
+}
+
+#title{
+    position: relative;
+    left: 10%;
+    color: white;
+    font-size: xx-large;
+    padding-top: 80px;
+    padding-bottom: 30px;
+}
+
+#empty-title{
+    position: absolute;
+    top: 150px;
+    left: 0;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.row-container{
+    width: 80%;
+    position: relative;
+    left:10%;
+}
+
+.card{
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    height: 300px;
+    overflow: hidden;
+    transition:500ms ease-in-out;
+}
+
+.card:hover{
+    transform: scale(1.1);
+    cursor:pointer;
+    box-shadow: -1px 26px 64px -20px rgba(255, 255, 255, 0.5);
+    -webkit-box-shadow: -1px 26px 64px -20px rgba(255, 255, 255, 0.5);
+    -moz-box-shadow: -1px 26px 64px -20px rgba(255, 255, 255, 0.5);
+}
+
+.img{
+    width:100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:top center;
+    border: none;
+    outline: none;
+}
+
+.card-img-overlay{
+    border: none;
+    border-radius: none;
+    text-align: left;
+    font-size: 13px;
+    color:white;
+    background-image: linear-gradient(
+        to top,
+        rgb(0, 0, 0),
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.2)
+     );
+    opacity: 0;
+    transition:500ms ease-in-out;
+}
+
+.card-img-overlay:hover{
+    cursor: pointer;
+    opacity:1;
+}
+
+.card-title{
+    padding: 10px;
+    position: absolute;
+    bottom: 0%;
+    font-size: medium;
+}
+
+@media screen and (max-width: 375px) {
+    #title{
+        font-size: 20px;
+    }
+}

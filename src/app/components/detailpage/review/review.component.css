@@ -1,0 +1,139 @@
+.review-container {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.review-title {
+    font-size: xx-large;
+    color: white;
+    font-family: 'Michroma', sans-serif;
+}
+
+#num-of-review {
+    color: rgba(192, 192, 192, 0.5);
+    font-size: x-large;
+}
+
+.card {
+    height: 300px;
+    border: none;
+    border-radius: 60px;
+    margin: 0;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.489);
+    backdrop-filter: blur(20px);
+}
+
+.img-container {
+    background: transparent;
+    padding: 0;
+}
+
+.img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 20px;
+}
+
+.card-body {
+    height: 300px;
+    background: transparent;
+}
+
+.card-title {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    font-size: x-large;
+    font-family: 'Michroma', sans-serif;
+}
+
+.date {
+    font-size: medium;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.rating {
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    width: 70px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgb(255, 255, 255);
+    margin-top: 10px;
+}
+
+.content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    position: relative;
+    font-size: medium;
+    margin-top: 30px;
+}
+
+.more {
+    text-decoration-line: underline;
+    font-size: medium;
+}
+
+
+/*****For Small Screen ************/
+@media screen and (max-width: 768px) {
+    .review-title {
+        font-size: large;
+    }
+
+    #num-of-review {
+        font-size: medium;
+    }
+
+    .card {
+        height: 400px;
+        border-radius: 20px;
+        margin-top: 10px;
+    }
+
+    .img {
+        width: 80px;
+        height: 80px;
+        border-radius: 40px;
+        margin: 15px;
+    }
+
+    .card-body {
+        height: 250px;
+        background: transparent;
+    }
+
+    .card-title {
+        font-size: medium
+    }
+
+    .date {
+        font-size: small;
+    }
+    
+    .rating {
+        height: 30px;
+        line-height: 30px;
+        width: 50px;
+        border-radius: 15px;
+        margin-top: 0
+    }
+
+    .content {
+        font-size: small;
+    }
+
+    .more {
+        font-size: small;
+    }
+}

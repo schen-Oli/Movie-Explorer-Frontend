@@ -1,0 +1,248 @@
+/* page */
+.movie-page {
+    background-image: linear-gradient(to right bottom, #394d98, #43438c, #4a397f, #4d3071, #4f2664);
+    width: 100%;
+    position: absolute;
+    padding-bottom: 30px;
+    font-family: 'Michroma', sans-serif;
+}
+
+/* Youtube Box */
+.video-container {
+    width: 80%;
+    position: relative;
+    left: 10%;
+    margin: 0;
+    margin-top: 100px;
+}
+
+.youtube-container {
+    padding: 0;
+    margin: 0;
+}
+
+.information-container {
+    position: relative;
+    padding: 10px;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.movie-title {
+    color: white;
+    font-size: xx-large;
+}
+
+.tag-line {
+    color: silver;
+    font-size: medium;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.date {
+    color: silver;
+    font-size: medium;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 20px;
+}
+
+.genres {
+    color: white;
+    font-size: medium;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.genres-detail {
+    color: silver;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.lang {
+    color: white;
+    font-size: medium;
+    margin-top: 5px;
+}
+
+.lang-detail {
+    color: silver;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#watch-list-btn {
+    margin-top: 20px;
+    background-color: rgb(0, 150, 250);
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Overview */
+.description {
+    width: 80%;
+    position: relative;
+    left: 10%;
+    margin: 0;
+    margin-top: 30px;
+}
+
+.des-title {
+    position: relative;
+    font-size: xx-large;
+    color: white;
+}
+
+.des-body {
+    font-size: medium;
+    color: silver;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Share */
+.share {
+    width: 80%;
+    position: relative;
+    top: 0;
+    left: 10%;
+    margin-top: 30px;
+}
+
+.share-title {
+    font-size: xx-large;
+    color: white;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.share-btn {
+    position: relative;
+    top: 0;
+    margin-top: 0;
+}
+
+.fab {
+    font-size: 2vw;
+    margin-right: 10px;
+}
+
+.fa-twitter {
+    color: rgb(40, 150, 250);
+}
+
+.fa-facebook-square {
+    color: rgb(10, 35, 250);
+}
+
+.cast-container {
+    width: 80%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    margin-top: 30px;
+    left: 10%;
+}
+
+#review-container {
+    width: 80%;
+    position: relative;
+    left: 10%;
+    margin-top: 30px;
+}
+
+.title {
+    position: relative;
+    font-size: xx-large;
+    margin-left: 10%;
+    margin-top: 30px;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+
+    .video-container {
+        width: 100%;
+        left: 0;
+        margin-top: 55px;
+    }
+
+    .information-container {
+        padding: 10px;
+    }
+
+    .movie-title {
+        font-size: large;
+    }
+
+    .date {
+        margin-top: 10px;
+    }
+
+    .genres {
+        margin-top: 10px;
+        font-size: small;
+    }
+
+    .lang {
+        font-size: small;
+        margin-top: 10px;
+    }
+
+    #watch-list-btn {
+        width: 100%;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+
+    .description {
+        width: 100%;
+        margin: 0;
+        left: 0;
+        padding: 10px;
+    }
+
+    .des-title {
+        font-size: large;
+    }
+
+    .des-body {
+        font-size: small;
+        margin: 0;
+    }
+
+    .share {
+        margin: 0;
+        width: 100%;
+        left: 0;
+        padding: 10px;
+    }
+
+    .share-title {
+        font-size: large;
+    }
+
+    .fab {
+        font-size: x-large;
+    }
+
+    .cast-container {
+        width: 100%;
+        margin: 0px;
+        padding: 0;
+        left: 0;
+    }
+
+    #review-container {
+        width: 90%;
+        left: 5%;
+        margin-top: 20px;
+    }
+
+    .title {
+        font-size: large;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    .movie-page::-webkit-scrollbar {
+        display: none;
+    }
+}

@@ -1,0 +1,64 @@
+<ng-container>
+
+    <h2 id="cast-title">Cast and Crew</h2>
+
+    <div class="cast-container row">
+        <div class="col-4 col-md-3 col-lg-2 card-container" *ngFor="let cast of casts">
+            <div class="card d-flex flex-column" data-bs-toggle="modal" data-target="#popup"
+                (click)="popUp(cast.id, popup)">
+
+                <div class="card-img-top flex-fill" [style.background-image]="'url(' +cast.profile + ')'"></div>
+                <div class="card-title flex-grow">
+                    {{cast.name}}<br>
+                    <hr>
+                    <p class="character">{{cast.character}}</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <ng-template #popup let-modal>
+        <div class="modal-header">
+            <h4 class="modal-title" id="actorName">Cast Name</h4>
+            <button type="button" class="btn-close" (click)="modal.dismiss('Cross click')"></button>
+        </div>
+        <div class="modal-body">
+            <div class="profile row">
+                <div class="col-lg-4 col-md-12" id="pic"></div>
+                <div id="info-container" class="col-lg-8 col-md-12">
+                    <p class="information" id="birth"></p>
+                    <p class="information" id="hometown"></p>
+                    <p class="information" id="gender"></p>
+                    <p class="information" id="homepage"></p>
+                    <p class="information" id="talent"></p>
+                    <p class="information" id="nickName"></p>
+                    <div class="external-link-container">
+                        <a class="icon" id="imdb" href="" target="_blank" ngbPopover="Visit IMDB" triggers="mouseenter:mouseleave"
+                            placement="top" popoverClass="popover">
+                            <i class="fab fa-imdb"></i>
+                        </a>
+                        <a class="icon" id="ins" href="" target="_blank" ngbPopover="Visit Instagram"
+                            triggers="mouseenter:mouseleave" placement="top" popoverClass="popover">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="icon" id="fb" href="" target="_blank" ngbPopover="Visit Facebook" triggers="mouseenter:mouseleave"
+                            placement="top" popoverClass="popover">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                        <a class="icon" id="tw" href="" target="_blank" ngbPopover="Visit Twitter" triggers="mouseenter:mouseleave"
+                            placement="top" popoverClass="popover">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <h1 id="bioTitle"></h1>
+            <p id="biography"></p>
+            <br><br>
+        </div>
+
+
+    </ng-template>
+
+</ng-container>

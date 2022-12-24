@@ -1,0 +1,35 @@
+<ng-container *ngIf="isScreenWide|async">
+    <ngb-carousel *ngIf="mediaData" class="slideContainer">
+        <ng-template ngbSlide *ngFor="let group of mediaDataGroup">
+            <div class="row-container row">
+                <div class="one-card-container col-2" *ngFor="let media of group"
+                    [routerLink]="['/watch', media.type, media.id]">
+                    <div class="one-card">
+                        <div class="img" [style.background-image]="'url(' + media.poster + ')'"></div>
+                        <div class="card-img-overlay">
+                            <p class="card-title">{{media.title}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+        </ng-template>
+
+    </ngb-carousel>
+</ng-container>
+
+
+<ng-container *ngIf="!(isScreenWide|async)">
+    <ngb-carousel [showNavigationIndicators]="false">
+        <ng-template ngbSlide *ngFor="let media of mediaData">
+            <div class="one-card-container" [routerLink]="['/watch', media.type, media.id]">
+                <div class="one-card">
+                    <div class="img" [style.background-image]="'url(' + media.poster + ')'"></div>
+                    <div class="card-img-overlay ">
+                        <p class="card-title">{{media.title}}</p>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </ngb-carousel>
+</ng-container>

@@ -1,0 +1,113 @@
+.navbar {
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: -1px 26px 64px -20px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: -1px 26px 64px -20px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: -1px 26px 64px -20px rgba(0, 0, 0, 0.5);
+    font-family: 'Michroma', sans-serif;
+}
+
+.navbar-brand {
+    font-size: medium;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-brand>img {
+    margin-right: 10px;
+}
+
+.navbar-toggler {
+    background-color: rgb(255, 255, 255) !important;
+    border: none;
+    opacity: 0.3;
+    transform: scale(0.7);
+}
+
+a {
+    color: rgb(255, 255, 255) !important;
+    text-align: right;
+
+}
+
+li a {
+    font-size: x-small !important;
+}
+
+a:hover {
+    color: rgb(140, 220, 255) !important;
+}
+
+.navbar-nav .active {
+    color: rgb(10, 75, 195) !important;
+    font-weight: bolder;
+}
+
+/*================ Input Box ================*/
+.form-control:focus {
+    border-color: #ffffff;
+    box-shadow: 0 0 0 0.1rem rgba(255, 255, 255, 0.3);
+} 
+
+#inputBox {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    color: white;
+    font-size: small;
+}
+
+#inputBox::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 0.5;
+}
+
+#inputBox:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#inputBox::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: rgba(255, 255, 255, 0.5);
+}
+/*==========================================*/
+
+/*================ Dropdown Menu ================*/
+.dropdown-menu {
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-top: 20px !important;
+    border: none;
+    border-radius: 10px;
+    font-size: medium;
+    backdrop-filter: blur(10px);
+    box-shadow: -1px 26px 64px -20px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: -1px 26px 64px -20px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: -1px 26px 64px -20px rgba(0, 0, 0, 0.5);
+}
+
+.images {
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 2px;
+    margin-right: 10px;
+}
+
+ngb-highlight {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: small;
+}
+
+.dropdown-item.active {
+    background-color: rgba(0, 0, 0, 0.3)
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .dropdown-menu {
+        width: 95%;
+    }
+}
+/*==========================================*/

@@ -1,0 +1,16 @@
+<div class="my-list-container">
+    <h1 id="title">My Watch List</h1>
+    <h1 id="empty-title">No items found in Watchlist.</h1>
+
+    <div class="row-container row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5  g-4">
+        <div class="col" *ngFor="let media of myList"
+            [routerLink]="['/watch', media.type, media.id]">
+            <div class="card">
+                <div class="img" [style.background-image]="'url(' + media.poster+ ')'"></div>
+                <div class="card-img-overlay">
+                    <p class="card-title">{{media.title}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

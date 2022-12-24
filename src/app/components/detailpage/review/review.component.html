@@ -1,0 +1,21 @@
+<div class="review-container">
+  <h1 class="review-title">Reviews <span id="num-of-review">&nbsp;{{numOfReviews}}</span></h1>
+
+  <div class="card row" *ngFor="let review of reviews">
+
+    <div class="col-md-2 col-sm-12 img-container">
+      <div class="img" [style.background-image]="'url(' + review.profile + ')'"></div>
+
+    </div>
+
+    <div class="col-md-10 col-sm-12 card-body">
+      <h5 class="card-title">A review created by {{review.author}} &nbsp;&nbsp;</h5>
+      <p class="date">{{review.date}}</p>
+      <div class="rating">&#9733;&nbsp;{{review.rate}}</div>
+      <p class="content">{{review.content}}</p>
+      <a class="more" href="{{review.full}}" target="_tab">Read the rest</a>
+    </div>
+
+  </div>
+
+</div>

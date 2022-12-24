@@ -1,0 +1,55 @@
+<div class="movie-page">
+
+    <div class="video-container row">
+        <div class="youtube-container col-lg-7 col-md-12">
+            <app-youtube [videoId]="details.youtubeLink"></app-youtube>
+        </div>
+
+        <div class="information-container col-lg-5 col-md-12">
+            <h1 class="movie-title">{{details.title}}</h1>
+            <h3 class="tag-line"><i>{{details.tagline}}</i></h3>
+            <h2 class="date">{{details.date}} | &#9733; {{details.vote}} | {{details.runtime}}</h2>
+            <h4 class="genres">Genres : <span class="genres-detail">{{details.genres}}</span></h4>
+            <h4 class="lang">Spoken Languages : <span class="lang-detail">{{details.languages}}</span></h4>
+
+            <button type="button" class="btn btn-md" (click)="editWatchList()" id="watch-list-btn">Add to Watch
+                List</button>
+
+        </div>
+    </div>
+
+    <div class="description" *ngIf="details.overview">
+        <h2 class="des-title">Description</h2>
+        <p class="des-body">{{details.overview}}</p>
+    </div>
+
+    <div class="share">
+        <h2 class="share-title">Share</h2>
+        <a href="https://twitter.com/intent/tweet?text={{twitterText1}}{{twitterText2}}" class="twitter-share share-btn"
+            data-show-count="false" target="_blank">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a class="fb-share-button share-btn" href="{{facebookLink}}" target="_blank">
+            <i class="fab fa-facebook-square"></i>
+        </a>
+    </div>
+
+    <div class="cast-container">
+        <app-casts [type]="'movie'" [id]="id"></app-casts>
+    </div>
+
+    <div id="review-container">
+        <app-review [type]="'movie'" [id]="id"></app-review>
+    </div>
+
+    <div id="sim-container">
+        <h1 class="title">Similar</h1>
+        <app-tiles [data]="similarMovies"></app-tiles>
+    </div>
+
+    <div id="rec-container">
+        <h1 class="title">Recommendations</h1>
+        <app-tiles [data]="recMovies"></app-tiles>
+    </div>
+
+</div>

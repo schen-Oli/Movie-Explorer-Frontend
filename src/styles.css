@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+/* @import "~@fortawesome/fontawesome-free/css/all.css"; */
+
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+div:focus {
+  border: none !important;
+  outline: none
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(5, 10, 50);
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px grey;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: silver;
+  border-radius: 5px;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: gray;
+}
+
+@media screen and (max-width: 600px) {
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+}

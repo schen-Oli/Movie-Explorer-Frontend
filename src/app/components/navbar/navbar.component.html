@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-md fixed-top">
+
+  <div class="container-fluid">
+
+    <a class="navbar-brand" href="/">
+      <img src="../../../assets/icon.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-center">
+      Movie Explorer
+    </a>
+
+    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#fullMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="fullMenu">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" [routerLinkActive]="['active']"
+            [routerLinkActiveOptions]="{exact:true}">Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/mylist" [routerLinkActive]="['active']"
+            [routerLinkActiveOptions]="{exact:true}">My List </a>
+        </li>
+      </ul>
+
+      <form class="d-flex" role="search">
+        <input type="text" id="inputBox" placeholder="Search" class="form-control" [(ngModel)]="model"
+            [ngbTypeahead]="search" [resultTemplate]="rt" [inputFormatter]="formatter" name="searchBox" />
+
+        <ng-template #rt let-r="result" let-t="term">
+            <img [src]="r['backdrop']" class="mr-1 images" [routerLink]="['/watch/', r['type'], r['id']]" />
+            <ngb-highlight [result]="r.title" [term]="t" [routerLink]="['/watch/', r['type'], r['id']]">
+            </ngb-highlight>
+        </ng-template>
+      </form>
+
+    </div>
+
+  </div>
+
+</nav>
