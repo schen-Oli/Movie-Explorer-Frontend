@@ -17,23 +17,23 @@ export class NavbarComponent implements OnInit {
 
   constructor(
     private _service: SearchMultiService,
-    ) { }
+  ) { }
 
-    ngOnInit(): void {
-    }
-  
+  ngOnInit(): void {
+  }
+
   search: OperatorFunction<string, any> = (text$: Observable<string>) =>
-      text$.pipe(
+    text$.pipe(
       debounceTime(300),
       distinctUntilChanged(),
       switchMap((searchText) => this._service.getSearchRes(searchText).pipe(
         tap(() => this.searchFailed = false),
-          catchError(() => {
-            this.searchFailed = true;
-            return of([]);
-          }))
+        catchError(() => {
+          this.searchFailed = true;
+          return of([]);
+        }))
       ),
     );
-  
-   formatter = () => "";
+
+  formatter = () => "";
 }

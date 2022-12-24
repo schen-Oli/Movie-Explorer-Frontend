@@ -11,6 +11,7 @@ export class GetDetailService {
   
   getMediaData(mediaType:String , id:any){
     let url = URLs.baseUrl + "/detail/" + mediaType + "/" + id;
+    console.log("getMediaURL: " + url);
     return this.httpClient.get<any>(url);
   }
 

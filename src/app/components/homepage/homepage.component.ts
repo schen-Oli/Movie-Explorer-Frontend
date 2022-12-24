@@ -27,24 +27,37 @@ export class HomepageComponent implements OnInit {
     this.getData();
   }
 
+  get24Res(res: PosterCard[]){
+    var ret: PosterCard[] = [];
+    var cnt = 0;
+    for(var i = 0; i < res.length; i++){
+      ret.push(res[i]);
+      cnt++;
+      if(cnt > 24){
+        break;
+      }
+    }
+    return ret;
+  }
+
   getData() {
     this.getMediaData.getMediaData("movie", "popular").subscribe(res => {
-      this.popularMovies = res;
+      this.popularMovies = this.get24Res(res);
     });
     this.getMediaData.getMediaData("movie", "top_rated").subscribe(res => {
-      this.topRatedMovies = res;
+      this.topRatedMovies = this.get24Res(res);
     });
     this.getMediaData.getMediaData("movie", "trending").subscribe(res => {
-      this.trendingMovies = res;
+      this.trendingMovies = this.get24Res(res);
     });
     this.getMediaData.getMediaData("tv", "popular").subscribe(res => {
-      this.popularTvs = res;
+      this.popularTvs = this.get24Res(res);
     });
     this.getMediaData.getMediaData("tv", "top_rated").subscribe(res => {
-      this.topRatedTvs = res;
+      this.topRatedTvs = this.get24Res(res);
     });
     this.getMediaData.getMediaData("tv", "trending").subscribe(res => {
-      this.trendingTvs = res;
+      this.trendingTvs = this.get24Res(res);
     });
     this.continueWatching = this.getContinue();
   }

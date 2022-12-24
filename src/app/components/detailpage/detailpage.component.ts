@@ -39,8 +39,8 @@ export class DetailpageComponent implements OnInit {
     private route: ActivatedRoute,
     private getDetails: GetDetailService,
     private router: Router,
-    private getRecAndSim : GetReconmmendService,
-   // private breakpoint: BreakpointObserver
+    private getRecAndSim: GetReconmmendService,
+    // private breakpoint: BreakpointObserver
   ) {
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
     this.router.events.subscribe((evt) => {
@@ -62,6 +62,7 @@ export class DetailpageComponent implements OnInit {
   fetchDetails() {
     this.getDetails.getMediaData(this.type, this.id).subscribe(res => {
       var details: any = res;
+      console.log("res: " + JSON.stringify(res));
       this.details.title = details.title;
       this.details.genres = details.genres;
       this.details.languages = details.lang;
@@ -79,9 +80,11 @@ export class DetailpageComponent implements OnInit {
 
     this.getDetails.getYoutube(this.type, this.id).subscribe(res => {
       let response: any = res;
-      this.details.youtubeLink = response.key;
-      this.twitterText2 = "https://www.youtube.com/watch?v=" + response.key;
-      this.facebookLink = "https://www.facebook.com/sharer/sharer.php?u=" + "https://www.youtube.com/watch?v=" + response.key;
+      let videoURL = response.key ? response.key : "BK5Efy43u_o";
+      this.details.youtubeLink = videoURL;
+      console.log("video : " + videoURL)
+      this.twitterText2 = "https://www.youtube.com/watch?v=" + videoURL;
+      this.facebookLink = "https://www.facebook.com/sharer/sharer.php?u=" + "https://www.youtube.com/watch?v=" + videoURL;
     })
   }
 
@@ -146,7 +149,7 @@ export class DetailpageComponent implements OnInit {
 
     var curr = JSON.parse(window.localStorage.getItem("watchList")!);
     if (this.inList) {
-      
+
       var tmpTitle = this.details.title;
       for (var i = 0; i < curr.length; i++) {
         if (curr[i].title == tmpTitle) {
@@ -157,7 +160,7 @@ export class DetailpageComponent implements OnInit {
       btn.innerText = "Add to Watchlist"
       this.inList = false;
       window.localStorage.setItem("watchList", JSON.stringify(curr));
-    
+
       // console.log("Deleting from watchList \n" + window.localStorage.getItem("watchList"));
     } else {
       var info: Carousel = {
@@ -171,28 +174,28 @@ export class DetailpageComponent implements OnInit {
       var btn = document.getElementById("watch-list-btn")!;
       btn.innerText = "Remove from Watchlist";
       this.inList = true;
-      
+
       //  console.log("Added to watchList \n" + window.localStorage.getItem("watchList"));
     }
   }
 
-  getSim(){
-    this.getRecAndSim.getSim(this.type, this.id).subscribe( res => {
-      if(res && Array.isArray(res) && res.length !=0){
+  getSim() {
+    this.getRecAndSim.getSim(this.type, this.id).subscribe(res => {
+      if (res && Array.isArray(res) && res.length != 0) {
         this.similarMovies = res;
         document.getElementById("sim-container")!.style.display = "block";
-      }else{
+      } else {
         document.getElementById("sim-container")!.style.display = "none";
       }
     })
   }
 
-  getRec(){
-    this.getRecAndSim.getRec(this.type, this.id).subscribe( res => {
-      if(res && Array.isArray(res) && res.length !=0){
+  getRec() {
+    this.getRecAndSim.getRec(this.type, this.id).subscribe(res => {
+      if (res && Array.isArray(res) && res.length != 0) {
         this.recMovies = res;
         document.getElementById("rec-container")!.style.display = "block";
-      }else{
+      } else {
         document.getElementById("rec-container")!.style.display = "none";
       }
     })

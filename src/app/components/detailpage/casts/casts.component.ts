@@ -1,7 +1,6 @@
 import { Component, OnInit, Input} from '@angular/core';
 import { GetCastService } from '../../../services/get-cast.service';
 import { GetCastDetailService } from '../../../services/get-cast-detail.service';
-import { BreakpointObserver } from '@angular/cdk/layout';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
